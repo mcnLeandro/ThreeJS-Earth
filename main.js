@@ -6,7 +6,7 @@ import fragmentShader from './shaders/fragment.glsl';
 import atomosphereVertexShader from './shaders/atomosphereVertex.glsl';
 import atomosphereFragmentShader from './shaders/atomosphereFragment.glsl';
 import gsap from 'gsap';
-import { Float32BufferAttribute } from 'three';
+import globeImgUrl from './img/globe.jpg'
 
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(
@@ -31,7 +31,7 @@ const sphere = new THREE.Mesh(
     fragmentShader,
     uniforms: {
       globeTexture: {
-        value: new THREE.TextureLoader().load('./img/globe.jpg'),
+        value: new THREE.TextureLoader().load(globeImgUrl),
       },
     },
   })
